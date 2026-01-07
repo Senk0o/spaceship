@@ -49,7 +49,7 @@
 </main>
 
 <footer class="flex flex-row justify-around items-center text-center 
-			   bg-gradient-to-br from-sky-600 to-sky-500 gap-20 px-16 py-8">
+			   bg-gradient-to-br from-sky-600 to-sky-500 gap-20 px-16 py-4 text-sm">
 	<p>© 2025 Spaceship Inc.</p>
 	
 	<ul class="flex flex-col gap-1 p-2">
