@@ -1,17 +1,19 @@
-<script>
+<script lang="ts">
+    import profile from '$lib/assets/img/user_white.png';
     let passwordInput;
     let showPassword = false;
-
+    
+    
     function togglePassword() {
         showPassword = !showPassword;
     }
 </script>
 
-<div class="min-h-90 flex items-center justify-center p-6 bg-gradient-to-br from-sky-800 via-sky-800 to-sky-950">
-    <main class="w-full max-w-lg p-8 mt-30 mb-30 rounded-tl-3xl rounded-br-3xl bg-white/10 border border-white/6 shadow-lg backdrop-blur-md">
-        <div class="flex items-center gap-6 mb-10">
-            <div class="w-20 h-20 flex items-center rounded-xl font-bold justify-center bg-gradient-to-br from-emerald-300 to-indigo-400">
-                ICON
+<div class="min-h-90 flex items-center justify-center p-6">
+    <main class="w-full max-w-lg p-8 mt-20 mb-20 rounded-tl-3xl rounded-br-3xl bg-white/10 border border-white/6 shadow-lg backdrop-blur-md">
+        <div class="flex items-center gap-4 mb-10">
+            <div class="w-20 h-20 flex items-center rounded-xl font-bold justify-center">
+                <img class="h-8/10" src="{profile}" alt="">
             </div>
             <div>
                 <h1 class="text-3xl font-semibold text-white">Connexion</h1>
@@ -64,8 +66,9 @@
                     <a href="/forgot-password" class="text-sm text-sky-200 hover:underline hover:text-white">Mot de passe oublié ?</a>
                     <button 
                         type="submit" 
-                        class="bg-gradient-to-br from-emerald-300 to-indigo-400
-                        font-semibold px-5 py-2 rounded-lg shadow"
+                        class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 
+                        font-semibold px-5 py-2 rounded-lg shadow 
+                        hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
                     >
                         Se connecter
                     </button>
@@ -75,7 +78,7 @@
         
         <p class="text-center text-sm text-sky-200">
             Vous n'avez pas encore de compte ?
-            <a href="/register" class="font-medium text-sky-200 underline hover:text-white">Rejoignez l'aventure ici</a>
+            <a href="/register" class="font-medium text-sky-200 hover:underline hover:text-white">Rejoignez l'aventure ici</a>
         </p>
     </main>
 </div>
