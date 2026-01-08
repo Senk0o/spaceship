@@ -39,6 +39,7 @@
 					<button>Déconnexion</button>
 				</form></li>
 			{:else}
+				<a class="bg-amber-400 font-bold py-2 px-4 rounded text-white" href="/crew">Mon équipage</a>
 				<li class="nav-link font-bold"><a href="/login">Connexion</a></li>
 				<li class="nav-link"><a href="/register">Inscription</a></li>
 			{/if}
