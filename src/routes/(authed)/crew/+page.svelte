@@ -31,7 +31,7 @@
                             type="text"
                             id="crew_name"
                             name="crew_name"
-                            value="3IL"
+                            value=""
                             required
                             class="w-full rounded-lg
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
@@ -42,7 +42,7 @@
                             type="text"
                             id="ship_name"
                             name="ship_name"
-                            value="USS Enterprise"
+                            value=""
                             required
                             class="w-full rounded-lg
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
@@ -89,7 +89,7 @@
                                     type="text"
                                     id="email"
                                     name="email"
-                                    value="3IL"
+                                    value=""dd
                                     required
                                     class="w-full rounded-lg
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50
