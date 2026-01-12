@@ -89,7 +89,7 @@
                                     type="text"
                                     id="email"
                                     name="email"
-                                    value=""dd
+                                    value=""
                                     required
                                     class="w-full rounded-lg
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50
