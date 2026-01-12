@@ -37,8 +37,7 @@
                     maxlength="20"
                     autocapitalize="none"
                     required
-
-                    value="username_test"
+                    value=""
                     class="w-full rounded-lg 
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
                     focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -57,8 +56,7 @@
                     name="username_linkedin"
                     autocomplete="username"
                     autocapitalize="none"
-                    
-                    value="username_linkedin_test"
+                    value=""
                     class="w-full rounded-lg 
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
                     focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -71,8 +69,7 @@
                     name="mail"
                     autocomplete="email"
                     required
-        
-                    value="email_test@gmail.com"
+                    value=""
                     class="w-full rounded-lg 
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
                     focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -88,7 +85,7 @@
                         name="password"
                         autocomplete="new-password"
                         required
-                        value="password_test"
+                        value=""
                         class="w-full rounded-lg 
                         bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
                         focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -112,7 +109,7 @@
                         name="password_confirm"
                         autocomplete="new-password"
                         required
-                        value="password_test"
+                        value=""
                         class="w-full rounded-lg 
                         bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
                         focus:outline-none focus:ring-2 focus:ring-orange-400"

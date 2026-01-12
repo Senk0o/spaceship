@@ -23,9 +23,9 @@
 	});
 </script>
 
-<head>
+<svelte:head>
 	<title>Vaisseau - [nom du jeu]</title>
-</head>
+</svelte:head>
 
 <h1 class="text-3xl font-bold">Vaisseau</h1>
 
