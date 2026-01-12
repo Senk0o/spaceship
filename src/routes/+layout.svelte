@@ -46,8 +46,7 @@
 		</ul>
 	</header>
 	
-	<!-- <main class="mt-10 mb-10"> -->
-	<main>
+	<main class="mt-10 mb-10 ">
 		{@render children()}
 	</main>
 	

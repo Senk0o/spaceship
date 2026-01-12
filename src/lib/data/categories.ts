@@ -1,16 +1,23 @@
+import type { Level } from './levels';
+import { levels } from './levels';
+
 export type Category = {
 	id: string;
 	name: string;
 	description: string;
-	link?: string;
+	short_description?: string;
+	link: string;
+	levels?: Level[];
 };
 
 export const categories: Record<string, Category> = {
 	cafeteria: {
 		id: 'cafeteria',
 		name: 'Formation',
-		description: 'description_catégorie',
-		link: 'formation'
+		description: 'Apprenez à former et à sensibiliser vos équipes aux bonnes pratiques du numérique responsable.',
+		short_description: 'short_description_catégorie',
+		link: 'formation',
+		levels: [levels.formation_beginner, levels.formation_intermediate, levels.formation_expert]
 	},
 	navigation: {
 		id: 'navigation',

@@ -46,6 +46,6 @@ export const actions: Actions = {
       { ...sessionCookie.attributes, secure: false, path: '/', sameSite: 'lax' }
     );
 
-    throw redirect(302, '/');
+    throw redirect(302, '/vessel');
   }
 };
