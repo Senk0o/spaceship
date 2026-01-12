@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <form method="post" class="space-y-4" {...{'formaction': '?/createCrew'}}>
+            <form method="post" class="space-y-4" action="/crew/create">
                 <fieldset class="space-y-4 border-0 p-0">
                     <legend class="sr-only">Créer votre équipage</legend>
                     <label for="crew_name" class="block text-md mb-1 font-bold text-white">Nom d'équipage</label>
@@ -79,17 +79,16 @@
                         <p class="text-sm text-sky-200">Ajoutez des membres à votre équipage</p>
                     </div>
                 </div>
-                <form method="post" class="space-y-4" {...{'formaction': '?/addMember'}}>
+                <form method="post" class="space-y-4" action="/crew/add-member">
                     <div class="flex items-center justify-between mb-12">
 
                         <fieldset class="space-y-4 border-0 p-0">
                             <legend class="sr-only">Membre à ajouter</legend>
-                            <label for="crew_name" class="block text-md mb-1 font-bold text-white">Nom
-                                d'utilisateur</label>
+                            <label for="email" class="block text-md mb-1 font-bold text-white">Email</label>
                             <input
                                     type="text"
-                                    id="crew_name"
-                                    name="crew_name"
+                                    id="email"
+                                    name="email"
                                     value="3IL"
                                     required
                                     class="w-full rounded-lg
