@@ -19,7 +19,7 @@
                 </div>
                 <div>
                     <h1 class="text-3xl font-semibold text-white">Créer mon équipage</h1>
-
+                    <p class="text-sm text-sky-200">Réunissez une équipe prête à relever tous les défis</p>
                 </div>
             </div>
 
@@ -50,14 +50,14 @@
                     />
 
 
-                    <div class="flex items-center justify-between mb-12">
-                        <p class="text-xs text-gray-500">Après avoir créé votre équipage, invitez vos
+                    <div class="flex items-center justify-between mb-12 gap-8">
+                        <p class="text-sm text-sky-200">Après avoir créé votre équipage, invitez vos
                             collaborateurs!</p>
                         <button
                                 type="submit"
                                 class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500
-                        font-semibold px-3 py-1 rounded-lg shadow
-                        hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
+                                font-semibold px-5 py-2 rounded-lg shadow
+                                hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600 text-nowrap"
                         >
                             Créer l'équipage
                         </button>

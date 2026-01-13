@@ -113,7 +113,7 @@
                     />
                 </div>
         
-                <div class="flex flex-row items-center justify-end mb-10">
+                <div class="flex flex-col items-end mb-8">
                     <button
                         type="submit"
                         class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 
@@ -122,16 +122,16 @@
                     >
                         Valider les modifications   
                     </button>
+                    <a href="/vessel" class="font-medium text-sky-200 hover:underline hover:text-white m-2">
+                        Annuler les modifications
+                    </a>                    
                 </div>
             </fieldset>
         </form>
-        <a href="/vessel" class="text-sm text-white underline hover:text-sky-200">
-            Annuler les modifications
-        </a>
-        <form method="POST" action="/delete-account">
+        <form method="POST" class="flex flex-row justify-center" action="/delete-account">
             <button class="bg-gradient-to-br from-red-400 via-red-400 to-red-500 
                 font-semibold px-5 py-2 rounded-lg shadow 
-                hover:bg-gradient-to-br hover:from-red-400 hover:via-red-500 hover:to-red-600"
+                hover:bg-gradient-to-br hover:from-red-500 hover:via-red-500 hover:to-red-500 hover:underline"
             >
                 Supprimer le compte
             </button>
