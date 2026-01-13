@@ -73,6 +73,7 @@ model Category {
 model News {
   id          BigInt   @id @default(autoincrement())
   titre       String
+  createdAt   DateTime @default(now())
   description String
   photo       String
   redirection String?

@@ -1,7 +1,8 @@
 <script>
 	import adnOuest from '$lib/assets/img/home/adnOuest.svg';
-	import hello from '$lib/assets/hello.jpeg';
 	import background from '$lib/assets/img/home/background.svg';
+
+	export let data;
 </script>
 
 <head>
@@ -123,41 +124,19 @@
 	<section class="w-screen flex flex-col items-center px-72 py-24 bg-sky-950 shadow-sm">
 		<h2 class="text-3xl font-semibold mb-16 text-white">Actualités</h2>
 		<section class="flex flex-row gap-8">
+			{#each data.news as item}
 			<article class="max-w-1/3 rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white">
 				<div class="flex flex-col items-start gap-4">
-					<h3 class="text-xl font-semibold">Titre</h3>
+					<h3 class="text-xl font-semibold">{item.titre}</h3>
 					<div class="h-auto w-full flex items-center justify-center rounded-lg bg-black/10 p-2">
-						<img src={hello} alt="">
+						<img src={item.photo} alt="">
 					</div>
 				</div>
-				<p class="mt-3 text-sm text-white/80 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facere recusandae odio neque porro consectetur saepe, minus reiciendis laboriosam cum. Quidem error natus necessitatibus ducimus laudantium delectus assumenda possimus sunt..</p>
+				<p class="mt-3 text-sm text-white/80 text-justify">{item.description}</p>
 				<a class="w-full flex justify-end text-white text-sm"
-					href="">Voir plus...</a>
+					href="{item.redirection}">Voir plus...</a>
 			</article>
-
-			<article class="max-w-1/3 rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white">
-				<div class="flex flex-col items-start gap-4">
-					<h3 class="text-xl font-semibold">Titre</h3>
-					<div class="h-auto w-full flex items-center justify-center rounded-lg bg-black/10 p-2">
-						<img src={hello} alt="">
-					</div>
-				</div>
-				<p class="mt-3 text-sm text-white/80 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facere recusandae odio neque porro consectetur saepe, minus reiciendis laboriosam cum. Quidem error natus necessitatibus ducimus laudantium delectus assumenda possimus sunt..</p>
-				<a class="w-full flex justify-end text-white text-sm"
-					href="">Voir plus...</a>
-			</article>
-
-			<article class="max-w-1/3 rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white">
-				<div class="flex flex-col items-start gap-4">
-					<h3 class="text-xl font-semibold">Titre</h3>
-					<div class="h-auto w-full flex items-center justify-center rounded-lg bg-black/10 p-2">
-						<img src={hello} alt="">
-					</div>
-				</div>
-				<p class="mt-3 text-sm text-white/80 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facere recusandae odio neque porro consectetur saepe, minus reiciendis laboriosam cum. Quidem error natus necessitatibus ducimus laudantium delectus assumenda possimus sunt..</p>
-				<a class="w-full flex justify-end text-white text-sm"
-					href="">Voir plus...</a>
-			</article>
+			{/each}
 		</section>
 
 		<a class="flex flex-col items-center justify-start mt-16

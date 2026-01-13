@@ -1,12 +1,15 @@
 import { prisma } from '../prisma';
 
 export const NewsRepository = {
-  findAll() {
-    return prisma.news.findMany();
+  getAll: async () => {
+    return prisma.news.findMany({
+      orderBy: { createdAt: 'desc' },
+      take: 20
+    });
   },
 
   findById(id: bigint) {
-    return prisma.user.findUnique({
+    return prisma.news.findUnique({
       where: { id }
     });
   },
@@ -14,7 +17,7 @@ export const NewsRepository = {
   findLatest(limit: number) {
     return prisma.news.findMany({
       orderBy: {
-        id: 'desc',
+        createdAt: 'desc',
       },
       take: limit,
     });
@@ -23,6 +26,7 @@ export const NewsRepository = {
   create(data: {
     titre: string;
     description: string;
+    createdAt: Date;
     photo: string;
     redirection?: string;
   }) {
