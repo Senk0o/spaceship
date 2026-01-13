@@ -1,22 +1,55 @@
 <script>
-    import Game1 from "../Game1.svelte";
-    let step = 0;
-    let steps = [step];
+    import GameStep from "$lib/components/GameStep.svelte";
+    
+    let step = $state();
+    let steps = $state([]);
 
-    function handleValidate(event) {
-        step = event.detail.value;
-        steps = [...steps, step];
+    function handleValidate(newStep) {
+        step = newStep;
+        steps.push(step);
     }
+
+    let choices_0 = [
+            "Acheter le vaisseau",
+            "Ne pas acheter le vaisseau"
+        ];
 
 </script>
 
-<p>Etapes : {steps}</p>
-
-{#if step == 0}
-    <Game1 stepResult="1" text="Welcome to the Beginner Purchase Game!" reponse="Your goal is to make your first purchase." image="./img/game_img_test.jpg" on:validate={handleValidate} />
+<p>Etapes : {steps.join(' > ')}</p>
+{#if !step}
+    <button onclick={() => {handleValidate("0")}} >
+        Commencer le jeu
+    </button>
 {/if}
 
-{#if step == 1}
-    <Game1 stepResult="2" text="Are you sure" reponse="yes captain." on:validate={handleValidate} />
+{#if step == "0"}
+    <GameStep
+        step="1"
+        text="Welcome to the Beginner Purchase Game!"
+        choices={choices_0}
+        image="/game/purchases-beginner/game_img_test.jpg"
+        imageAlt="vaisseau"
+        audio="/game/purchases-beginner/audio/0.m4a"
+        audioLoop={true}
+        onValidate={handleValidate}
+    />
 {/if}
-src/routes/(authed)/games/purchases-beginner/img/game_img_test.jpg
+{#if step == "1_0"}
+    <GameStep
+        step="2"
+        text="You chose to buy the spaceship!"
+        audio="/game/purchases-beginner/audio/0_1.mp3"
+        duration=-1
+        onValidate={handleValidate}
+    />
+{/if}
+{#if step == "1_1"}
+    <GameStep step="2" text="You chose not to buy the spaceship." choices={["Continue"]} onValidate={handleValidate} />
+{/if}
+{#if step == "2_0"}
+    <p>End of the game. You bought the spaceship.</p>
+{/if}
+{#if step == "2_1"}
+    <p>End of the game. You did not buy the spaceship.</p>
+{/if}
