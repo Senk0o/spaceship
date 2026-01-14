@@ -71,20 +71,22 @@
 
   <section class="w-full max-w-4xl space-y-3">
     {#each others as entry, index}
-      <div class="flex items-center justify-between
-                  rounded-lg bg-white/10 border border-white/6
-                  px-6 py-4 text-white">
+      <div class="flex items-center justify-between text-white rounded-lg 
+                    bg-gradient-to-br from-white/10 to-white/10
+                    border border-white/30
+                    hover:bg-white/10
+                    px-6 py-4">
         <div class="flex items-center gap-6">
           <span class="text-white/60 font-mono">
             #{index + 4}
           </span>
           <div class="flex flex-col">
-            <span class="font-medium">{entry.crew.name}</span>
-            <p class="font-semibold text-lg">🚀 {entry.crew.vaisseau}</p>
+            <p class="font-semibold text-md">{entry.crew.name}</p>
+            <p class="text-sm">🚀 {entry.crew.vaisseau}</p>
           </div>
         </div>
 
-        <span class="text-white/80">
+        <span class="bg-black/10 px-2 py-1 rounded-lg text-sm text-white/80">
           {formatPoints(entry.points)} pts
         </span>
       </div>
