@@ -1,4 +1,5 @@
 <script>
+	import { rooms } from '$lib/data/rooms';
 	import adnOuest from '$lib/assets/img/home/adnOuest.svg';
 	import background from '$lib/assets/img/home/background.svg';
 
@@ -38,86 +39,16 @@
 		<h2 class="text-3xl font-semibold mb-16 text-white">Des dizaines de défis stimulant à résoudre et bien plus à l'avenir.</h2>
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" 
 				 aria-label="Thématiques abordées dans le jeu">
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-black/10 text-2xl">💻</div>
-					<h3 class="text-lg font-semibold">Equipements</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Choix durable, maintenance et gestion du parc matériel.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🎓</div>
-					<h3 class="text-lg font-semibold">Formation</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Parcours et ressources pour monter en compétences.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🔔</div>
-					<h3 class="text-lg font-semibold">Sensibilisation</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Actions et communications pour mobiliser les équipes.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">♿️</div>
-					<h3 class="text-lg font-semibold">Accessibilité</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Rendre les services utilisables par le plus grand nombre.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🧭</div>
-					<h3 class="text-lg font-semibold">Parcours UX</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Conception d’expériences claires et efficaces.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🔍</div>
-					<h3 class="text-lg font-semibold">Usages</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Analyse des comportements pour améliorer les services.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🖥️</div>
-					<h3 class="text-lg font-semibold">Services numériques</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Conception et exploitation de services accessibles et responsables.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">🛒</div>
-					<h3 class="text-lg font-semibold">Achats</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Approvisionnement responsable et critères de sélection.</p>
-			</article>
-
-			<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
-							hover:border-orange-400 hover:-translate-y-1">
-				<div class="flex items-center gap-4">
-					<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 text-2xl">♻️</div>
-					<h3 class="text-lg font-semibold">Fin de vie des équipements</h3>
-				</div>
-				<p class="mt-3 text-sm text-white/80">Recyclage, réemploi et réduction des déchets électroniques.</p>
-			</article>
+			{#each rooms as room}			
+				<article class="rounded-lg bg-white/10 border border-white/6 shadow-lg backdrop-blur-md p-6 text-white
+								hover:border-orange-400 hover:-translate-y-1">
+					<div class="flex items-center gap-4">
+						<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-black/10 text-2xl">{room.category.icon}</div>
+						<h3 class="text-lg font-semibold">{room.category.name}</h3>
+					</div>
+					<p class="text-sm text-white/80">{room.category.short_description}</p>
+				</article>
+			{/each}
         </section>
 	</section>
 
