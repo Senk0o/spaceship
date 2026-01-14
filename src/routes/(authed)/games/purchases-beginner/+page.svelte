@@ -25,7 +25,7 @@
 
 {#if step == "0"}
     <GameStep
-        step="1"
+        nextStep="1"
         text="Welcome to the Beginner Purchase Game!"
         choices={choices_0}
         image="/game/purchases-beginner/game_img_test.jpg"
@@ -37,7 +37,7 @@
 {/if}
 {#if step == "1_0"}
     <GameStep
-        step="2"
+        nextStep="2"
         text="You chose to buy the spaceship!"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
@@ -45,7 +45,7 @@
     />
 {/if}
 {#if step == "1_1"}
-    <GameStep step="2" text="You chose not to buy the spaceship." choices={["Continue"]} onValidate={handleValidate} />
+    <GameStep nextStep="2" text="You chose not to buy the spaceship." choices={["Continue"]} onValidate={handleValidate} />
 {/if}
 {#if step == "2_0"}
     <p>End of the game. You bought the spaceship.</p>

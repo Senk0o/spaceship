@@ -1,10 +1,10 @@
 <script>
-    let { step, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate } = $props();
+    let { nextStep, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate } = $props();
     
     let result;
 
     function handleClick(index) {
-        const nextValue = step + "_" + index;
+        const nextValue = nextStep + "_" + index;
         onValidate(nextValue);
     }
 
@@ -20,14 +20,14 @@
             if (duration == - 1 && audio && !audioLoop) {
                 // Si duration est -1, on attend la fin de l'audio
                 audioElement.onended = () => {
-                    onValidate(step + "_0");
+                    onValidate(nextStep + "_0");
                 };
                 return;
             }
             else {
                 const timer = setTimeout(() => {
                     // On renvoie automatiquement le step actuel suivi de _0
-                    onValidate(step + "_0");
+                    onValidate(nextStep + "_0");
                 }, duration * 1000); // Conversion secondes en millisecondes
                 return () => clearTimeout(timer);
             }
