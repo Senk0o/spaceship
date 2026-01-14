@@ -17,24 +17,26 @@
 		<h1 class="bg-white/10 text-4xl font-semibold text-white py-2 px-6 rounded-lg">{data.categoryAct.name ?? '...'}</h1>
 		<p class="text-white py-4">{data.categoryAct.description ?? ''}</p>
 		
-		<section class="border flex flex-col gap-4 p-4" 
+		<section class="flex flex-col gap-4 p-4" 
 			aria-labelledby="levels-title">
 			<p class="text-lg text-white">Liste des niveau disponibles :</p>
 			{#if data.categoryAct.levels?.length}
 				<ul class="flex flex-col gap-4">
 					{#each data.categoryAct.levels as level}
 						<li class="text-white">
-							<article class="flex flex-col gap-2 p-4 rounded-3xl 
+							<article class="flex flex-col gap-2 p-4 rounded-2xl 
 											bg-white/10 border border-white/6 shadow-lg backdrop-blur-md">
-								<h2 class="w-auto bg-black/20 text-lg rounded-2xl px-3 py-1">{level.name}</h2>
+								<h2 class="bg-black/20 py-1 px-2 rounded-lg">{level.name}</h2>
 								<p>{level.description}</p>
-								<p>{level.duration} minutes</p> <span class="sr-only">Durée :</span>
-								<a href="./{data.categoryAct.link}/{level.link}"
-									class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 font-semibold px-5 py-2 rounded-lg shadow hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
+								<div class="flex flex-row self-end items-center gap-4 mt-4">
+									<span class="sr-only">Durée estimée :</span><p>⏳ {level.duration} minutes</p> 
+									<a href="./{data.categoryAct.link}/{level.link}"
+									class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 text-black font-semibold px-5 py-2 rounded-lg shadow hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
 									aria-label={`Jouer au niveau ${level.name}`}
-								>
+									>
 									Jouer
-								</a>
+									</a>
+								</div>
 							</article>
 						</li>
 					{/each}
