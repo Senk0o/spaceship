@@ -46,7 +46,7 @@
 						<div class="h-12 w-12 flex items-center justify-center rounded-lg bg-black/10 text-2xl">{room.category.icon}</div>
 						<h3 class="text-lg font-semibold">{room.category.name}</h3>
 					</div>
-					<p class="text-sm text-white/80">{room.category.short_description}</p>
+					<p class="text-sm text-white/80 mt-4">{room.category.short_description}</p>
 				</article>
 			{/each}
         </section>
