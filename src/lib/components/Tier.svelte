@@ -6,14 +6,14 @@
   export let badges = [];
 </script>
 
-<section>
+<section class="bg-white/10 rounded-lg p-6 shadow-lg backdrop-blur-md">
   <div class="flex items-center gap-4 mb-8">
     <span class="text-4xl">{icon}</span>
     <h2 class="text-3xl font-semibold text-white">{title}</h2>
   </div>
 
   {#if badges.length === 0}
-    <p class="text-white/50 italic">
+    <p class="text-white italic">
       Aucun badge débloqué pour ce tier.
     </p>
   {:else}

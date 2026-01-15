@@ -8,16 +8,16 @@
 
 <title>Badges</title>
 
-<section class="w-screen flex flex-col items-center px-72 pt-6 pb-12">
+<section class="w-screen flex flex-col items-center px-72 pt-4 pb-12">
   <h1 class="bg-white/10 text-4xl font-semibold text-white py-2 px-6 rounded-lg">
     Vos distinctions
   </h1>
 
-  <p class="mt-4 text-white/70 text-sm">
+  <p class="mt-4 text-white text-sm">
     Vos accomplissements au fil de l’aventure
   </p>
 
-  <section class="w-full max-w-6xl mt-20 space-y-24">
+  <section class="w-full max-w-6xl mt-20 space-y-8">
     <Tier
       title="Badges Or"
       icon="🥇"
