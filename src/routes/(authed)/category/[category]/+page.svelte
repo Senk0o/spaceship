@@ -19,8 +19,8 @@
 		
 		<section class="flex flex-col gap-4 p-4" 
 			aria-labelledby="levels-title">
-			<p class="text-lg text-white">Liste des niveau disponibles :</p>
 			{#if data.categoryAct.levels?.length}
+				<p class="text-lg text-white">Liste des niveau disponibles :</p>
 				<ul class="flex flex-col gap-4">
 					{#each data.categoryAct.levels as level}
 						<li class="text-white">
@@ -42,7 +42,7 @@
 					{/each}
 				</ul>
 			{:else}
-				<p role="status">Aucun niveau disponible.</p>
+				<p class="bg-red-500/50 px-2 py-1 mt-8 text-center font-semibold text-white text-lg rounded-lg" role="status">Aucun niveau disponible pour le moment.</p>
 			{/if}
 		</section>
 	</section>
