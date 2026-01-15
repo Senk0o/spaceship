@@ -60,7 +60,7 @@
 	<header class="flex flex-row justify-between items-center gap-20 px-8 py-2 
 				   bg-black/30 backdrop-blur-md shadow-2xl shadow-black/10 text-white text-lg">
 		<!-- Logo -->
-		 <a class="p-1 " href="/"><img class="h-15" src="{icon}" alt="" ></a>
+	 	<a class="p-1" href="/"><img class="h-12 w-auto block" src="{icon}" alt="Spaceship logo"></a>
 	
 		<!-- Navigation / catégories -->
 		<nav>
@@ -75,19 +75,21 @@
 		</nav>
 
 		<!-- Login/Compte/Notifications -->
-		<ul class="flex items-center gap-5">
+		<ul class="flex items-center gap-5 h-10">
 			{#if data.user}
 				<!-- https://www.svgrepo.com/svg/532088/bell -->
-				<a class="bg-gradient-to-br from-amber-400 via-orange-400 to-orange-500 font-semibold px-4 py-2 rounded-md shadow text-lg text-black
-				hover:bg-gradient-to-br hover:from-orange-400 hover:via-orange-500 hover:to-orange-500 hover:underline focus:underline" href="/crew">Mon équipage</a>
-				<li class="nav-link"><a class="p-1 " href="/notifications"><img class="h-5" src="{notification_icon}" alt="notifications"></a></li>
-				<li class="nav-link font-bold"><a class="p-1 " href="/manage_account">Profil</a></li>
+				<li>
+					<a class="bg-gradient-to-br from-amber-400 via-orange-400 to-orange-500 font-semibold px-4 py-2 rounded-md shadow text-lg text-black
+					hover:bg-gradient-to-br hover:from-orange-400 hover:via-orange-500 hover:to-orange-500 hover:underline focus:underline" href="/crew">Mon équipage</a>
+				</li>
+				<li class="nav-link flex items-center"><a class="p-1 flex items-center" href="/notifications"><img class="h-5 w-auto block" src="{notification_icon}" alt="notifications"></a></li>
+				<li class="nav-link font-bold"><a class="p-1" href="/manage_account">Profil</a></li>
 				<li class="nav-link"><form method="POST" action="/logout">
-					<button class="cursor-pointer p-1 ">Déconnexion</button>
+					<button class="cursor-pointer p-1">Déconnexion</button>
 				</form></li>
 			{:else}
-				<li class="nav-link font-bold"><a class="p-1 " href="/login">Connexion</a></li>
-				<li class="nav-link"><a class="p-1 " href="/register">Inscription</a></li>
+				<li class="nav-link font-bold"><a class="p-1" href="/login">Connexion</a></li>
+				<li class="nav-link"><a class="p-1" href="/register">Inscription</a></li>
 			{/if}
 		</ul>
 	</header>

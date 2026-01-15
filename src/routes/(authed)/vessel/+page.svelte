@@ -36,7 +36,7 @@
 		<div class="w-full text-white py-4">
 			<p>Vous appartenez au vaisseau : <span>[nom du vaisseau]</span></p>
 			<p>Choisisser le domaine auxquels vous voulez en choisissant la salle ou via le menu des catégories.</p>				
-			<article class="bg-black/10 mt-4 py-1 px-2 rounded-lg" aria-live="polite" aria-atomic="true"> 
+			<article class="bg-black/10 mt-4 py-1 px-2 rounded-lg min-h-14" aria-live="polite" aria-atomic="true"> 
 					{#if hoveredCategory}	
 						<span class="font-bold">{hoveredCategory.name}</span>
 						<span class="text-sm" id={`desc-${hoveredCategory.id}`}>
