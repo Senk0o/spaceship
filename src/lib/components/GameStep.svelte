@@ -82,11 +82,18 @@
                 <img src={sound_on} data-muted="false" class="w-10" alt="son activé">
             </button>
         </div>
-        {#if image}
-            <div class="overflow-hidden rounded-lg border border-white/5 shadow-inner">
-                <img src={image} alt="{imageAlt}" class="max-w-full h-auto object-cover max-h-[500px]"/>
-            </div>
-        {/if}
+        
+        <div class="overflow-hidden rounded-lg shadow-inner h-[500px] h-[500px] bg-white/5">
+            {#if image}
+                <img 
+                    src={image} 
+                    alt={imageAlt} 
+                    class="w-full h-full object-contain"
+                    loading="eager"
+                />
+            {/if}
+        </div>
+        
     
         <div class="w-full flex justify-center text-center">
             <p tabindex=0 class="max-w-2/3 text-white text-xl font-light italic">

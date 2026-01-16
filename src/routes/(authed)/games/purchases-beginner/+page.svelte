@@ -48,8 +48,7 @@
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/4-SPACESHIP_DOOR_OPENING_1.png"
         imageAlt="la porte commence à s'ouvrir"
-        audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
-        duration=-1
+        duration=2
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -60,7 +59,7 @@
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/5-SPACESHIP_DOOR_OPENING_2.png"
         imageAlt="la porte commence à s'ouvrir"
-        audio=""
+        audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=1
         onValidate={handleValidate}
     />
@@ -72,7 +71,7 @@
         image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
         imageAlt="la porte continue de s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
-        duration=1
+        duration=-1
         onValidate={handleValidate}
     />
 {/if}
@@ -104,7 +103,6 @@
         text=""
         image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2.png"
         imageAlt="la lumière est éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
