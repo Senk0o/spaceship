@@ -17,7 +17,7 @@
     {#if podium[1]}
       <!-- 2nd -->
       <article class="flex flex-col items-center">
-        <p class="mb-2 text-4xl">🥈</p>
+        <div class="mb-2 text-4xl">🥈</div>
         <div class="h-50 w-50 flex flex-col items-center justify-center text-white rounded-lg 
                     bg-gradient-to-br from-stone-300/20 to-stone-500/20
                     border border-stone-200/50
@@ -58,7 +58,7 @@
                     bg-gradient-to-br from-red-300/20 to-red-500/20
                     border border-red-200/50
                     hover:bg-red-200/20">
-          <p class="font-semibold text-xl">{podium[2].crew.name}</p>
+          <p class="font-semibold text-xl text-center">{podium[2].crew.name}</p>
           <p class="text-md">🚀 {podium[2].crew.vaisseau}</p>
           <p class="bg-black/10 px-2 py-1 mt-4 rounded-lg text-sm text-white/80">
             {formatPoints(podium[2].points)} pts

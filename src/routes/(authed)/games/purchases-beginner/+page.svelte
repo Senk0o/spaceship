@@ -48,7 +48,8 @@
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/4-SPACESHIP_DOOR_OPENING_1.png"
         imageAlt="la porte commence à s'ouvrir"
-        duration=2
+        audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -61,6 +62,7 @@
         imageAlt="la porte commence à s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -71,7 +73,8 @@
         image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
         imageAlt="la porte continue de s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
-        duration=-1
+        duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -94,6 +97,7 @@
         image="/game/purchases-beginner/7-SPACESHIP_DOOR_OPENED_1.png"
         imageAlt="la porte est ouverte et une lumère vive entre dans le vaisseau"
         duration=2
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -101,7 +105,7 @@
     <GameStep
         nextStep="6"
         text=""
-        image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2.png"
+        image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2(1).png"
         imageAlt="la lumière est éblouissante"
         duration=1
         audioMuted={audioMutedAll}
@@ -112,10 +116,10 @@
     <GameStep
         nextStep="7"
         text=""
-        image="/game/purchases-beginner/9-SPACESHIP_DOOR_OPENED_3.png"
+        image="/game/purchases-beginner/9-SPACESHIP_DOOR_OPENED_3(1).png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
-        duration=-1
+        duration=2
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -138,7 +142,7 @@
         nextStep="9"
         text="IA : Le kepa, un fruit très prisé, n'est cultivé que sur cette planète."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -152,7 +156,7 @@
         nextStep="10"
         text="IA : Notre entreprise souhaite en récupérer un maximum afin de les revendre sur la planète Luxuria, la planète regroupant les familles les plus riches de la galaxie."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -170,7 +174,7 @@
             "Je me sens obligé d'accepter...",
             "Je préfèrerais rentrer chez moi."
         ]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -184,7 +188,7 @@
         nextStep="12"
         text="IA : Parfait, vous semblez comprendre l'importance de cette mission auprès de l'entreprise."
         choices={["Commence par me dire où se trouve le contact."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -198,7 +202,7 @@
         nextStep="12"
         text="IA : La famille Gouraud, principale actionnaire de l'entreprise, a décidé de vous accorder leur confiance en vous nommant responsable de ce vaisseau. Cela serait dommage de la décevoir."
         choices={["D'accord c'est compris. Dis-moi où se trouve le contact."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -212,7 +216,7 @@
         nextStep="11_2"
         text="IA : Je tiens à vous rappeler que conformément aux lois en vigueur sur la planète Luxuria, votre registre d'identité est détenu par l'entreprise."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -226,7 +230,7 @@
         nextStep="12"
         text="IA : De plus, la famille Gouraud, principale actionnaire de l'entreprise, a décidé de vous accorder leur confiance en vous nommant responsable de ce vaisseau. Cela serait dommage de la décevoir."
         choices={["C'est bon j'ai compris, Dis moi où je dois me rendre pour rencontrer notre contact."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -240,7 +244,7 @@
     <GameStep
         nextStep="13"
         text="IA : Recherche en cours."
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -253,7 +257,7 @@
     <GameStep
         nextStep="14"
         text="IA : Recherche en cours.."
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -266,7 +270,7 @@
     <GameStep
         nextStep="14_0"
         text="IA : Recherche en cours..."
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -280,7 +284,7 @@
         nextStep="15"
         text="IA : Recherche en cours..."
         choices={["bon..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -294,7 +298,7 @@
         nextStep="16"
         text="IA : Recherche terminée. Notre contact se situe à un kilomètre à l'Ouest de votre position."
         choices={["Bien, allons-y."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
@@ -306,9 +310,9 @@
 {#if step == "16_0"}
     <GameStep
         nextStep="17"
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-walk-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         duration=2
         audioMuted={audioMutedAll}
@@ -320,9 +324,9 @@
         nextStep="17_0"
         text="IA : Pour votre développement personnel, souhaitez-vous en savoir plus sur la planète Koziris ?"
         choices={["Pourquoi pas, ça m'occupera.", "Je préfèrerais me concentrer sur la mission."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-walk-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -334,9 +338,9 @@
         nextStep="17_0_0"
         text="IA : Koziris a majoritairement un climat aride, sa seule zone habitable se situe dans une cuvette entourée de reliefs qui protège des vents violents sur le reste de la planète. C'est ici que vous vous trouvez."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -348,9 +352,9 @@
         nextStep="17_0_0_0"
         text="IA : La composition unique de son atmosphère rend possible la culture du kepa. Celui-ci aurait la capacité d'allonger la durée de vie si consommé régulièrement."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -362,9 +366,9 @@
         nextStep="17_0_0_0_0"
         text="IA : C'est la seule plante qui est adaptée à cet environnement extrême. Elle est ainsi la source unique de nourriture pour la population."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -376,9 +380,9 @@
         nextStep="17_0_0_0_0_0"
         text="IA : Celle-ci est l'une des plus pauvres de la galaxie suite aux récentes interventions violentes de diverses organisations justement intéressées par le contrôle de la zone de culture du fruit."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -390,9 +394,9 @@
         nextStep="17_0_0_0_0_0_0"
         text="IA : Dernièrement, c'est la faction Al'Cata qui a pris le contrôle de l'unique culture, après avoir commis de nombreuses exactions. La population est donc entièrement dépendante de cette organisation."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -404,9 +408,9 @@
         nextStep="17_0_0_0_0_0_0_0"
         text="IA : Cependant, l'objectif d'Al'Cata est de revendre sa production au plus offrant."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -418,9 +422,9 @@
         nextStep="18"
         text="IA : Notre contact n'est autre que Catmandou, le chef de la faction."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -432,9 +436,9 @@
         nextStep="17_0_1"
         text="IA : C'est bien dommage de ne pas vous y intéresser, l'entreprise apprécie quand ses employés se sensibilisent à des thématiques RSE..., jusqu'à une certaine mesure."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -446,9 +450,9 @@
         nextStep="18"
         text="IA : ..."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
+        imageAlt="la lumière deviens moins éblouissante"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
