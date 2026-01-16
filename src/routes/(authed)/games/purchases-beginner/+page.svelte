@@ -124,7 +124,7 @@
         nextStep="8"
         text="IA : Vous vous trouvez actuellement sur la planète Koziris."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioLoop=1
