@@ -60,7 +60,7 @@
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/5-SPACESHIP_DOOR_OPENING_2.png"
         imageAlt="la porte commence à s'ouvrir"
-        audio=""
+        audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -107,8 +107,7 @@
         text=""
         image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2(1).png"
         imageAlt="la lumière est éblouissante"
-        audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
-        duration=2
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
