@@ -7,10 +7,8 @@ export const load: PageServerLoad = async ({ locals }) => {
 		throw redirect(302, '/login');
 	}
 
-    const crew = await CrewRepository.findById(locals.user.crewId)
-
 	return {
 		user: locals.user,
-        crew
+		crew : locals.user.crewId ? await CrewRepository.findById(locals.user.crewId) : ''
 	};
 };
