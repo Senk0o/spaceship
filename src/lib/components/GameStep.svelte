@@ -1,17 +1,21 @@
 <script>
-    let { nextStep, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate } = $props();
+    let { nextStep, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate, audioTime = 0 } = $props();
     
     let result;
 
     function handleClick(index) {
         const nextValue = nextStep + "_" + index;
-        onValidate(nextValue);
+        const currentAudioTime = audioElement ? audioElement.currentTime : 0;
+        onValidate(nextValue, currentAudioTime);
     }
 
     let audioElement;
     $effect(() => {
         // --- Logique Audio ---
         if (audio) {
+            if (audioTime > 0) {
+                audioElement.currentTime = audioTime;
+            }
             audioElement.play();
         }
 
@@ -20,14 +24,15 @@
             if (duration == - 1 && audio && !audioLoop) {
                 // Si duration est -1, on attend la fin de l'audio
                 audioElement.onended = () => {
-                    onValidate(nextStep + "_0");
+                    onValidate(nextStep + "_0", 0);
                 };
                 return;
             }
             else {
                 const timer = setTimeout(() => {
                     // On renvoie automatiquement le step actuel suivi de _0
-                    onValidate(nextStep + "_0");
+                    const currentAudioTime = audioElement ? audioElement.currentTime : 0;
+                    onValidate(nextStep + "_0", currentAudioTime);
                 }, duration * 1000); // Conversion secondes en millisecondes
                 return () => clearTimeout(timer);
             }

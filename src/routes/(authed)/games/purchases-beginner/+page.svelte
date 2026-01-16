@@ -4,7 +4,11 @@
     let step = $state();
     let steps = $state([]);
 
-    function handleValidate(newStep) {
+    let audioTime = $state(0);
+
+    function handleValidate(newStep, audioPosition = 0) {
+        audioTime = audioPosition;
+
         step = newStep;
         steps.push(step);
     }
@@ -29,10 +33,10 @@
 {#if step == "0_0"}
     <GameStep
         nextStep="1"
-        text="IA : Atterrissage en cours"
+        text="IA : Atterrissage en cours."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="porte de vaisseau spatiale fermée"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/spaceship-landing.mp3"
         duration=-1
         onValidate={handleValidate}
     />
@@ -40,26 +44,26 @@
 {#if step == "1_0"}
     <GameStep
         nextStep="2"
-        text="IA : Aterrissage réussi, ouverture de la porte"
+        text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la porte commence à s'ouvrir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=-1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "2_0"}
     <GameStep
-        nextStep="3"
+        nextStep="4"
         text=""
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la porte continue de s'ouvrir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
         duration=-1
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "3_0"}
+<!-- {#if step == "3_0"}
     <GameStep
         nextStep="4"
         text=""
@@ -69,36 +73,35 @@
         duration=-1
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "4_0"}
     <GameStep
-        nextStep="5"
+        nextStep="6"
         text=""
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la porte est ouverte et une lumère vive entre dans le vaisseau"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        duration=1
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "5_0"}
+<!-- {#if step == "5_0"}
     <GameStep
         nextStep="6"
         text=""
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière est éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        duration=1
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "6_0"}
     <GameStep
         nextStep="7"
         text=""
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
         duration=-1
         onValidate={handleValidate}
     />
@@ -106,48 +109,54 @@
 {#if step == "7_0"}
     <GameStep
         nextStep="8"
-        text="IA : Vous vous trouvez actuellement sur la planete Koziris."
+        text="IA : Vous vous trouvez actuellement sur la planète Koziris."
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "8_0"}
     <GameStep
         nextStep="9"
-        text="IA : Sur cette planete pousse un fruit unique, le kepa."
+        text="IA : Le kepa, un fruit très prisé, pousse uniquement ici."
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "9_0"}
     <GameStep
         nextStep="10"
-        text="IA : Du fait de sa valeur élevée, l'entreprise place sa confiance en vous afin d'en acheter un maximum afin de le revendre sur la planete Luxuria, la planête regroupant le plus de richesse de la galaxie."
+        text="IA : Notre entreprise souhaite en récupérer un maximum afin de les revendre sur la planète Luxuria, la planète regroupant les familles les plus riches de la galaxie."
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "10_0"}
     <GameStep
         nextStep="11"
-        text="IA : Acceptez-vous cette mission ?"
+        text="IA : Acceptez-vous de remplir cette mission mission ?"
         choices={[
-            "Oui, je ferais tout pour réussir cette mission.",
-            "Je suis bien obligé d'accepter.",
+            "Oui, je ferai le nécessaire pour mener à bien cette mission.",
+            "Je me sens obligé d'accepter...",
             "Je préfèrerais rentrer chez moi."
         ]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -155,44 +164,52 @@
 {#if step == "11_0"}
     <GameStep
         nextStep="12"
-        text="IA : Très bien, vous semblez comprendre de l'interêt de cette mission pour l'entreprise."
+        text="IA : Parfait, vous semblez comprendre l'importance de cette mission auprès de l'entreprise."
+        choices={["Commence par me dire où se trouve le contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "11_1"}
     <GameStep
         nextStep="12"
-        text="IA : Vous êtes en charge d'un vaisseau grace à la bienveillance de notre plus gros actionnaire sur Luxuria, la famille Gouraud. Tachez de ne pas le décevoir."
+        text="IA : La famille Gouraud, principale actionnaire de l'entreprise, a décidé de vous accorder leur confiance en vous nommant responsable de ce vaisseau. Cela serait dommage de la décevoir."
+        choices={["D'accord c'est compris. Dis-moi où se trouve le contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "11_2"}
     <GameStep
         nextStep="11_2"
-        text="IA : Je tiens à vous rappeler que conformément aux loi en vigueur sur la planete Luxuria, votre registre d'identité est détenue par l'entreprise."
+        text="IA : Je tiens à vous rappeler que conformément aux lois en vigueur sur la planète Luxuria, votre registre d'identité est détenu par l'entreprise."
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "11_2_0"}
     <GameStep
         nextStep="12"
-        text="IA : De plus, si vous êtes en charge d'un vaisseau c'est grace à la bienveillance de notre plus gros actionnaire sur Luxuria, la famille Gouraud, qui voit un potentiel en vous. Tachez de ne pas le décevoir."
+        text="IA : De plus, la famille Gouraud, principale actionnaire de l'entreprise, a décidé de vous accorder leur confiance en vous nommant responsable de ce vaisseau. Cela serait dommage de la décevoir."
+        choices={["C'est bon j'ai compris, Dis moi où je dois me rendre pour rencontrer notre contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
@@ -203,8 +220,9 @@
         text="IA : Recherche en cours..."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        duration=1
         onValidate={handleValidate}
     />
 {/if}
@@ -214,8 +232,9 @@
         text="IA : Recherche en cours... recherche en cours..."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        duration=1
         onValidate={handleValidate}
     />
 {/if}
@@ -226,7 +245,8 @@
         choices={["bon..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -238,7 +258,8 @@
         choices={["Bien, allons-y"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -249,8 +270,9 @@
         text=""
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        duration=2
         onValidate={handleValidate}
     />
 {/if}
@@ -261,7 +283,8 @@
         choices={["Pourquoi pas ca m'occupera", "je préfèrerais qu'on se concentre sur la mission"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -273,7 +296,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -285,7 +309,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -297,7 +322,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -309,7 +335,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -321,7 +348,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -333,7 +361,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -345,7 +374,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -357,7 +387,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -369,7 +400,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -381,7 +413,8 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
         audioLoop=1
         onValidate={handleValidate}
     />
@@ -390,10 +423,12 @@
 {#if step == "18_0_0"}
     <GameStep
         nextStep="19"
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audioTime={audioTime}
+        audioLoop=1
         onValidate={handleValidate}
     />
 {/if}
