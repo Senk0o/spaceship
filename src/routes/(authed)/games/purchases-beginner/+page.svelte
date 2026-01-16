@@ -19,10 +19,6 @@
         step = null;
         steps = [];
     }
-
-    function gameFinished() {
-        // Logic to handle game completion, e.g., navigate to next level
-    }
 </script>
 
 <!-- <p class="bg-black/10 text-white text-sm px-2 py-1 m-2 rounded-lg">Etapes : {steps.join(' > ')}</p> -->
@@ -38,7 +34,7 @@
     <GameStep
         nextStep="1"
         text="IA : Atterrissage en cours..."
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/1-SPACESHIP_DOOR_CLOSED_1.png"
         imageAlt="porte de vaisseau spatiale fermée"
         audio="/game/purchases-beginner/audio/spaceship-landing.mp3"
         duration=-1
@@ -48,9 +44,9 @@
 {/if}
 {#if step == "1_0"}
     <GameStep
-        nextStep="2"
+        nextStep="1_0"
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/4-SPACESHIP_DOOR_OPENING_1.png"
         imageAlt="la porte commence à s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=-1
@@ -58,58 +54,67 @@
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "2_0"}
+{#if step == "1_0_0"}
     <GameStep
-        nextStep="4"
-        text=""
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la porte continue de s'ouvrir"
-        audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
-        duration=-1
-        audioMuted={audioMutedAll}
+        nextStep="2"
+        text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
+        image="/game/purchases-beginner/5-SPACESHIP_DOOR_OPENING_2.png"
+        imageAlt="la porte commence à s'ouvrir"
+        audio=""
+        duration=1
         onValidate={handleValidate}
     />
 {/if}
-<!-- {#if step == "3_0"}
+{#if step == "2_0"}
+    <GameStep
+        nextStep="3"
+        text=""
+        image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
+        imageAlt="la porte continue de s'ouvrir"
+        audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
+        duration=1
+        onValidate={handleValidate}
+    />
+{/if}
+{#if step == "3_0"}
     <GameStep
         nextStep="4"
         text=""
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
         imageAlt=""
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
-        audioMuted={audioMutedAll}
-        onValidate={handleValidate}
-    />
-{/if} -->
-{#if step == "4_0"}
-    <GameStep
-        nextStep="6"
-        text=""
-        image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la porte est ouverte et une lumère vive entre dans le vaisseau"
+        audio=""
         duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
-<!-- {#if step == "5_0"}
+{#if step == "4_0"}
+    <GameStep
+        nextStep="5"
+        text=""
+        image="/game/purchases-beginner/7-SPACESHIP_DOOR_OPENED_1.png"
+        imageAlt="la porte est ouverte et une lumère vive entre dans le vaisseau"
+        duration=2
+        onValidate={handleValidate}
+    />
+{/if}
+{#if step == "5_0"}
     <GameStep
         nextStep="6"
         text=""
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2.png"
         imageAlt="la lumière est éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
-{/if} -->
+{/if}
 {#if step == "6_0"}
     <GameStep
         nextStep="7"
         text=""
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/9-SPACESHIP_DOOR_OPENED_3.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
         duration=-1
@@ -122,7 +127,7 @@
         nextStep="8"
         text="IA : Vous vous trouvez actuellement sur la planète Koziris."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioLoop=1
@@ -779,13 +784,20 @@
     />
 {/if}
 {#if step == "30_1_0_0_0_0_0_0_0"}
+    <form method="POST">
     <GameStep
         nextStep="1000"
         text="Fin du niveau. Félicitations, vous avez réussi le niveau. Vous pouvez passer au suivant pour explorer de nouvelles situations."
         choices={["Terminer le niveau"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt=""
-        onValidate={gameFinished}
     />
+
+    <!-- champ caché pour identifier l’action -->
+    <input type="hidden" name="action" value="finishGame" />
+
+    <button type="submit" class="hidden"></button>
+    </form>
+
 {/if}
 </section>
