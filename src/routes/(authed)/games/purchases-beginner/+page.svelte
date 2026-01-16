@@ -124,7 +124,7 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -133,11 +133,11 @@
 {#if step == "8_0"}
     <GameStep
         nextStep="9"
-        text="IA : Le kepa, un fruit très prisé, pousse uniquement ici."
+        text="IA : Le kepa, un fruit très prisé, n'est cultivé que sur cette planète."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -151,7 +151,7 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -169,7 +169,7 @@
         ]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -183,7 +183,7 @@
         choices={["Commence par me dire où se trouve le contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -197,7 +197,7 @@
         choices={["D'accord c'est compris. Dis-moi où se trouve le contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -211,7 +211,7 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -225,7 +225,7 @@
         choices={["C'est bon j'ai compris, Dis moi où je dois me rendre pour rencontrer notre contact."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -239,7 +239,7 @@
         text="IA : Recherche en cours."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         duration=1
         audioMuted={audioMutedAll}
@@ -252,7 +252,7 @@
         text="IA : Recherche en cours.."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         duration=1
         audioMuted={audioMutedAll}
@@ -265,7 +265,7 @@
         text="IA : Recherche en cours..."
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         duration=1
         audioMuted={audioMutedAll}
@@ -279,7 +279,7 @@
         choices={["bon..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -293,7 +293,7 @@
         choices={["Bien, allons-y."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -304,8 +304,8 @@
     <GameStep
         nextStep="17"
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-walk-wind-people.mp3"
         audioTime={audioTime}
         duration=2
         audioMuted={audioMutedAll}
@@ -318,8 +318,8 @@
         text="IA : Pour votre développement personnel, souhaitez-vous en savoir plus sur la planète Koziris ?"
         choices={["Pourquoi pas, ça m'occupera.", "Je préfèrerais me concentrer sur la mission."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-walk-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -332,8 +332,8 @@
         text="IA : Koziris a majoritairement un climat aride, sa seule zone habitable se situe dans une cuvette entourée de reliefs qui protège des vents violents sur le reste de la planète. C'est ici que vous vous trouvez."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -346,8 +346,8 @@
         text="IA : La composition unique de son atmosphère rend possible la culture du kepa. Celui-ci aurait la capacité d'allonger la durée de vie si consommé régulièrement."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -360,8 +360,8 @@
         text="IA : C'est la seule plante qui est adaptée à cet environnement extrême. Elle est ainsi la source unique de nourriture pour la population."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -374,8 +374,8 @@
         text="IA : Celle-ci est l'une des plus pauvres de la galaxie suite aux récentes interventions violentes de diverses organisations justement intéressées par le contrôle de la zone de culture du fruit."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -388,8 +388,8 @@
         text="IA : Dernièrement, c'est la faction Al'Cata qui a pris le contrôle de l'unique culture, après avoir commis de nombreuses exactions. La population est donc entièrement dépendante de cette organisation."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -402,8 +402,8 @@
         text="IA : Cependant, l'objectif d'Al'Cata est de revendre sa production au plus offrant."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -416,8 +416,8 @@
         text="IA : Notre contact n'est autre que Catmandou, le chef de la faction."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -430,8 +430,8 @@
         text="IA : C'est bien dommage de ne pas vous y intéresser, l'entreprise apprécie quand ses employés se sensibilisent à des thématiques RSE..., jusqu'à une certaine mesure."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -444,8 +444,8 @@
         text="IA : ..."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -458,8 +458,8 @@
         text="IA : Vous êtes arrivé, le bâtiment doit se situer en face de vous."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-wind-people.mp3"
         audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
@@ -472,10 +472,8 @@
         nextStep="19"
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
-        audioTime={audioTime}
-        audioLoop=1
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/boom-cinematic.mp3"
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -486,8 +484,8 @@
         text="Gardien : Vous êtes là pour acheter ?"
         choices={["Oui"]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -499,8 +497,9 @@
         text="Gardiens : Entrez, le chef vous attend."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -510,9 +509,10 @@
     <GameStep
         nextStep="22"
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -521,9 +521,9 @@
     <GameStep
         nextStep="23"
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/walk-industrial.mp3"
+        duration=3
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -532,9 +532,9 @@
     <GameStep
         nextStep="24"
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/door-opening.mp3"
+        duration=4
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -544,9 +544,9 @@
         nextStep="25"
         text="Chef d'Al'Cata : Asseyez-vous, ce sera rapide."
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/door-opening.mp3"
+        audioTime={audioTime}
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -555,8 +555,8 @@
     <GameStep
         nextStep="26"
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/walking-chair.mp3"
         duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -568,8 +568,8 @@
         text="Chef d'Al'Cata : Notre marché tient toujours ? Tout le stock de kepa contre les armes ?"
         choices={["Des armes ? Nous n'avons pas ramené..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -581,8 +581,9 @@
         text="IA : Je ne vous avais pas prévenu afin de garantir la confidentialité de la mission, mais notre entreprise a conclu un accord avec Al'Cata."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -594,8 +595,9 @@
         text="IA : Nous n'étions pas les seuls à être intéressés par ces fruits et nous avons donc conclu un arrangement avec Al'Cata. Les fruits en échange de simples armes."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -607,8 +609,9 @@
         text="Chef d'Al'Cata : Vous avez bien les armes ?"
         choices={["Oui, nous les avons amenées comme convenu.", "Euh non, on les a oubliés, zut !"]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -620,8 +623,9 @@
         text="Chef d'Al'Cata : Parfait, c'est un plaisir que d'avoir des partenaires aussi intéressés par ces fruits."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -632,7 +636,7 @@
         nextStep="30_0_0"
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/finish-industrial.mp3"
         duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -643,8 +647,7 @@
         nextStep="30_0_0_0"
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -656,8 +659,7 @@
         choices={["Merci"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt=""
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -669,8 +671,6 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -682,8 +682,6 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -695,8 +693,6 @@
         choices={["Recommencer le niveau"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
         onValidate={resetGame}
     />
 {/if}
@@ -706,8 +702,9 @@
         text="Chef d'Al'Cata : Quoi ? Vous n'avez pas les armes ?"
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -716,11 +713,12 @@
 {#if step == "30_1_0"}
     <GameStep
         nextStep="30_1_0"
-        text="Chef d'Al'Cata : Dans ce cas, partez. Je finirai par trouver une autre entreprise intéressée par le fruit."
+        text="Chef d'Al'Cata : Dans ce cas, barrez-vous ! Je finirai par trouver une autre entreprise intéressée par le fruit."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="la lumière deviens moins éblouissante"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        imageAlt=""
+        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
+        audioTime={audioTime}
         audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -731,7 +729,7 @@
         nextStep="30_1_0_0"
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
+        audio="/game/purchases-beginner/audio/finish-industrial.mp3"
         duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
@@ -742,8 +740,7 @@
         nextStep="30_1_0_0_0"
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        duration=-1
+        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -755,8 +752,6 @@
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -767,9 +762,7 @@
         text="IA : Pour information, malgré cet échec, la population pauvre de la planète ne souffrira pas de la famine car il y aura suffisamment de kepa."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
+        imageAlt=""
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -780,9 +773,7 @@
         text="IA : De plus, Al'Cata sera affaibli et ne sera pas en mesure de continuer d'oppresser la population. La faction finira par se briser de l'intérieur en plusieurs petits groupes affaiblis."
         choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
+        imageAlt=""
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
@@ -793,9 +784,7 @@
         text="Fin du niveau. Félicitations, vous avez réussi le niveau. Vous pouvez passer au suivant pour explorer de nouvelles situations."
         choices={["Terminer le niveau"]}
         image="/game/purchases-beginner/game_img_test.jpg"
-        imageAlt="fondu noir"
-        audio="/game/purchases-beginner/audio/0_1.mp3"
-        audioLoop=1
+        imageAlt=""
         onValidate={gameFinished}
     />
 {/if}
