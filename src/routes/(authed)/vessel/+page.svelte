@@ -9,6 +9,7 @@
 	let height = 0;
 	let imgEl: HTMLImageElement;
 	let hoveredCategory: Category | null = null;
+	export let data;
 
 	onMount(() => {
 		if (imgEl.complete) {
@@ -32,9 +33,9 @@
 
 <main class="min-h-90 justify-center items-start">
 	<section class="w-screen flex flex-col items-center px-72 pt-4 pb-4">
-		<h1 class="bg-white/10 text-4xl font-semibold text-white py-2 px-6 rounded-lg">Vaisseau</h1>
+		<h1 class="bg-white/10 text-4xl font-semibold text-white py-2 px-6 rounded-lg">Bienvenue à bord {data.user.rank === 'captain' ? 'capitaine' : 'voyageur'} !</h1>
+		<h4 class="text-xl font-semibold text-white">Vous embarquez sur le <span>{data.crew.vaisseau}</span></h4>
 		<div class="w-full text-white py-4">
-			<p>Vous appartenez au vaisseau : <span>[nom du vaisseau]</span></p>
 			<p>Choisisser le domaine auxquels vous voulez en choisissant la salle ou via le menu des catégories.</p>				
 			<article class="bg-black/10 mt-4 py-1 px-2 rounded-lg min-h-14" aria-live="polite" aria-atomic="true"> 
 					{#if hoveredCategory}	
