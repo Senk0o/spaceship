@@ -1,17 +1,22 @@
 <script>
     import sound_on from '$lib/assets/img/sound-loud-black.svg';
     import sound_off from '$lib/assets/img/sound-mute-black.svg';
-    let { nextStep, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate, audioTime = 0 } = $props();
+    let { nextStep, text, choices, image, imageAlt, audio, audioLoop, duration, onValidate, audioTime = 0, audioMuted = 0} = $props();
 
     let result;
+
+    function toggleMute() {
+        isMuted = !isMuted;
+    }
 
     function handleClick(index) {
         const nextValue = nextStep + "_" + index;
         const currentAudioTime = audioElement ? audioElement.currentTime : 0;
-        onValidate(nextValue, currentAudioTime);
+        onValidate(nextValue, currentAudioTime, isMuted ? 1 : 0);
     }
 
     let audioElement;
+    let isMuted = $state(!!audioMuted);
     // click sound player (reused to avoid creating many Audio instances)
     const clickAudio = new Audio('/audio/interface-confirmation.mp3');
     clickAudio.preload = 'auto';
@@ -29,11 +34,9 @@
     }
     $effect(() => {
         // --- Logique Audio ---
-        if (audio) {
-            if (audioTime > 0) {
-                audioElement.currentTime = audioTime;
-            }
-            audioElement.play();
+        if (audio && audioElement) {
+            if (audioTime > 0) audioElement.currentTime = audioTime;
+            audioElement.play().catch(() => {});
         }
 
         // --- Logique Duration (Validation automatique) ---
@@ -41,7 +44,7 @@
             if (duration == - 1 && audio && !audioLoop) {
                 // Si duration est -1, on attend la fin de l'audio
                 audioElement.onended = () => {
-                    onValidate(nextStep + "_0", 0);
+                    onValidate(nextStep + "_0", 0, isMuted ? 1 : 0);
                 };
                 return;
             }
@@ -49,7 +52,7 @@
                 const timer = setTimeout(() => {
                     // On renvoie automatiquement le step actuel suivi de _0
                     const currentAudioTime = audioElement ? audioElement.currentTime : 0;
-                    onValidate(nextStep + "_0", currentAudioTime);
+                    onValidate(nextStep + "_0", currentAudioTime, isMuted ? 1 : 0);
                 }, duration * 1000); // Conversion secondes en millisecondes
                 return () => clearTimeout(timer);
             }
@@ -61,22 +64,13 @@
 
 <main class="w-screen flex flex-col items-center px-72 py-8">
     <section class="w-full p-6 bg-black/20 backdrop-blur-sm rounded-2xl bg-white/10 border border-white/6 shadow-lg backdrop-blur-md flex flex-col items-center gap-6">
-            <div class="w-full flex justify-start">
-            <button 
-                class="px-1 py-1"
-                on:click={(e) => {
-                    const btn = e.currentTarget;
-                    const img = btn.querySelector('img');
-                    if (!img) return;
-                    const currentlyMuted = img.dataset.muted === 'true';
-                    const newMuted = !currentlyMuted;
-                    img.src = newMuted ? sound_off : sound_on;
-                    img.alt = newMuted ? 'son coupé' : 'son activé';
-                    img.dataset.muted = String(newMuted);
-                    if (audioElement) audioElement.muted = newMuted;
-                }}
-            >
-                <img src={sound_on} data-muted="false" class="w-10" alt="son activé">
+        <div class="w-full flex justify-start">
+            <button class="px-1 py-1" onclick={toggleMute}>
+                <img 
+                    src={isMuted ? sound_off : sound_on} 
+                    class="w-10" 
+                    alt={isMuted ? 'son coupé' : 'son activé'}
+                >
             </button>
         </div>
         {#if image}
@@ -94,7 +88,7 @@
         <div class="flex flex-wrap justify-center gap-4 w-full mt-4">
             {#if (!choices || choices.length === 0) && !duration}
                 <button 
-                    on:click={() => { playClick(); handleClick(0); }}
+                    onclick={() => { playClick(); handleClick(0); }}
                     class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-200 border border-white/20 active:scale-95"
                 >
                     Continuer...
@@ -103,7 +97,7 @@
     
             {#each choices as choice, i}
                 <button 
-                    on:click={() => {
+                    onclick={() => {
                         playClick();
                         result = i;
                         handleClick(result);
@@ -118,7 +112,12 @@
         </div>
     
         {#if audio}
-            <audio bind:this={audioElement} src={audio} loop={audioLoop}></audio>
+            <audio 
+                bind:this={audioElement} 
+                src={audio} 
+                loop={audioLoop} 
+                bind:muted={isMuted} 
+            ></audio>
         {/if}
     </section>
 </main>

@@ -5,9 +5,11 @@
     let steps = $state([]);
 
     let audioTime = $state(0);
+    let audioMutedAll = $state(0);
 
-    function handleValidate(newStep, audioPosition = 0) {
+    function handleValidate(newStep, audioPosition = 0, audioMutedValue = 0) {
         audioTime = audioPosition;
+        audioMutedAll = audioMutedValue;
 
         step = newStep;
         steps.push(step);
@@ -23,7 +25,7 @@
     }
 </script>
 
-<p class="bg-black/10 text-white text-sm px-2 py-1 m-2 rounded-lg">Etapes : {steps.join(' > ')}</p>
+<!-- <p class="bg-black/10 text-white text-sm px-2 py-1 m-2 rounded-lg">Etapes : {steps.join(' > ')}</p> -->
 <section class="flex justify-center mt-8">
     {#if !step}
         <button class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 text-black font-semibold px-5 py-2 rounded-lg shadow hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
@@ -40,6 +42,7 @@
         imageAlt="porte de vaisseau spatiale fermée"
         audio="/game/purchases-beginner/audio/spaceship-landing.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -51,6 +54,7 @@
         imageAlt="la porte commence à s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -62,6 +66,7 @@
         imageAlt="la porte continue de s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -83,6 +88,7 @@
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt="la porte est ouverte et une lumère vive entre dans le vaisseau"
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -105,6 +111,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
