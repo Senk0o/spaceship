@@ -11,7 +11,7 @@
 </script>
 
 <head>
-	<title>Connexion - [nom du jeu]</title>
+	<title>Connexion - Green Odyssey</title>
 </head>
 
 <div class="min-h-90 flex flex-col items-center justify-center p-6">

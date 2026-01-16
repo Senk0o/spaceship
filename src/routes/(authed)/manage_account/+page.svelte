@@ -8,7 +8,7 @@
 </script>
 
 <head>
-	<title>Gestion du compte - [nom du jeu]</title>
+	<title>Gestion du compte - Green Odyssey</title>
 </head>
 
 <div class="min-h-90 flex flex-col items-center justify-center p-6">
