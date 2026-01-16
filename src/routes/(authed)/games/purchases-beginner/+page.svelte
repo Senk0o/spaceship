@@ -78,6 +78,7 @@
         imageAlt=""
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if} -->
@@ -100,6 +101,7 @@
         imageAlt="la lumière est éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if} -->
@@ -124,6 +126,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -137,6 +140,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -150,6 +154,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -167,6 +172,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -180,6 +186,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -193,6 +200,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -206,6 +214,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -219,6 +228,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -232,6 +242,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -244,6 +255,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -256,6 +268,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         duration=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -269,6 +282,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -282,6 +296,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -293,6 +308,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         duration=2
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -306,6 +322,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -319,6 +336,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -332,6 +350,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -345,6 +364,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -358,6 +378,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -371,6 +392,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -384,6 +406,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -397,6 +420,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -410,6 +434,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -423,6 +448,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -436,6 +462,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -449,6 +476,7 @@
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
         audioTime={audioTime}
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -461,6 +489,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -473,6 +502,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -483,6 +513,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -493,6 +524,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -503,6 +535,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -514,6 +547,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -524,6 +558,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -536,6 +571,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -548,6 +584,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -560,6 +597,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -572,6 +610,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -584,6 +623,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -594,6 +634,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -604,6 +645,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -616,6 +658,7 @@
         imageAlt=""
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -628,6 +671,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -640,6 +684,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -664,6 +709,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -676,6 +722,7 @@
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -686,6 +733,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -696,6 +744,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         duration=-1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -708,6 +757,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -720,6 +770,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
@@ -732,6 +783,7 @@
         imageAlt="fondu noir"
         audio="/game/purchases-beginner/audio/0_1.mp3"
         audioLoop=1
+        audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
