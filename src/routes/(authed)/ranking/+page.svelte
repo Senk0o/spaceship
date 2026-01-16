@@ -17,7 +17,7 @@
     {#if podium[1]}
       <!-- 2nd -->
       <article class="flex flex-col items-center">
-        <p class="mb-2 text-4xl">🥈</p>
+        <div class="mb-2 text-4xl">🥈</div>
         <div class="h-50 w-50 flex flex-col items-center justify-center text-white rounded-lg 
                     bg-gradient-to-br from-stone-300/20 to-stone-500/20
                     border border-stone-200/50
