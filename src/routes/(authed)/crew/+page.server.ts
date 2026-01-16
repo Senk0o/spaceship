@@ -8,6 +8,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 	}
 
 	return {
-		crew : locals.user.crewId ? await CrewRepository.findById(locals.user.crewId) : ''
+		crew : locals.user.crewId ? await CrewRepository.findById(locals.user.crewId) : '',
+		topMembers: await CrewRepository.getTopCrewMembers(locals.user.crewId)
 	};
 };

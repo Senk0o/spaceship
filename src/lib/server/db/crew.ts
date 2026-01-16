@@ -105,6 +105,16 @@ export const CrewRepository = {
     });
   },
 
+  async getTopCrewMembers(crewId: bigint, top = 3) {
+    const members = await prisma.user.findMany({
+      where: { crewId },
+      orderBy: { points: 'desc' },
+      take: top
+    });
+
+    return members;
+  },
+
   create(data: {
     name: string;
     vaisseau: string;

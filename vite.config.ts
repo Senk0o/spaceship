@@ -7,6 +7,8 @@ export default defineConfig({
 	server: {
     watch: {
       usePolling: true
-    }
+    },
+    host: true,
+    allowedHosts: ['greenodyssey.com']
   }
 });

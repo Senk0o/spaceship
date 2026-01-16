@@ -2,6 +2,8 @@
     import profile from '$lib/assets/img/ship_crew.png';
 
 	export let data;
+
+    const podium = data.topMembers.slice(0, 3); // top 3 du crew
 </script>
 
 <head>
@@ -111,4 +113,24 @@
 
     {/if}
     <h1 class="text-3xl font-semibold text-white">Officiers du vaisseau</h1>
+
+
+<section class="w-screen flex flex-col items-center px-24 py-16">
+
+  <section class="flex items-end gap-8 mb-12">
+    {#each podium as user, index}
+      <div class="flex flex-col items-center">
+        <div class="mb-2 text-3xl">
+          {index === 0 ? '🥇' : index === 1 ? '🥈' : '🥉'}
+        </div>
+        <div class="h-36 w-36 rounded-lg bg-white/10 border border-white/6 
+                    flex flex-col items-center justify-center text-white p-4">
+          <p class="font-semibold text-lg">{user.username}</p>
+                    <p class="bg-black/10 px-2 py-1 mt-4 rounded-lg text-sm text-white/80">{user.points} pts</p>
+        </div>
+        <p class="mt-2 text-white/70">{index + 1}ᵉ</p>
+      </div>
+    {/each}
+  </section>
+</section>
 </div>
