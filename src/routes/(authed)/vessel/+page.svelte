@@ -112,5 +112,5 @@
 
 {:else}
 	<p>Vous n'appartenez pas encore à un équipage.</p>
-	<p>Créez en un <a href="">ici</a> ou attendez que le capitaine d'un équipage vous ajoute dans le sien.</p>
+	<p>Créez en un <a href="/crew">ici</a> ou attendez que le capitaine d'un équipage vous ajoute dans le sien.</p>
 {/if}
