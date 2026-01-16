@@ -25,7 +25,7 @@
 <section class="flex justify-center mt-8">
     {#if !step}
         <button class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 text-black font-semibold px-5 py-2 rounded-lg shadow hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
-                onclick={() => {handleValidate("0_0")}} >
+                onclick={() => {handleValidate("30_1_0_0_0_0_0_0")}} >
             Commencer le jeu
         </button>
     {/if}
@@ -44,17 +44,17 @@
 {/if}
 {#if step == "1_0"}
     <GameStep
-        nextStep="1_0"
+        nextStep="2"
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/4-SPACESHIP_DOOR_OPENING_1.png"
         imageAlt="la porte commence à s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-closing.mp3"
-        duration=1
+        duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "1_0_0"}
+<!-- {#if step == "1_0_0"}
     <GameStep
         nextStep="2"
         text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
@@ -65,32 +65,31 @@
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "2_0"}
     <GameStep
         nextStep="3"
-        text=""
+        text="IA : Atterrissage réussi, ouverture de la porte du vaisseau."
         image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
         imageAlt="la porte continue de s'ouvrir"
         audio="/game/purchases-beginner/audio/spaceship-door-opening.mp3"
-        duration=1
+        duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
 {#if step == "3_0"}
     <GameStep
-        nextStep="4"
-        text=""
+        nextStep="5"
+        text="IA : Vous pouvez descendre du vaisseau."
+        choices={["..."]}
         image="/game/purchases-beginner/6-SPACESHIP_DOOR_OPENING_3.png"
         imageAlt=""
-        audio=""
-        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "4_0"}
+<!-- {#if step == "4_0"}
     <GameStep
         nextStep="5"
         text=""
@@ -100,30 +99,31 @@
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "5_0"}
     <GameStep
-        nextStep="6"
+        nextStep="7"
         text=""
         image="/game/purchases-beginner/8-SPACESHIP_DOOR_OPENED_2(1).png"
         imageAlt="la lumière est éblouissante"
-        duration=1
+        audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
+        duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "6_0"}
+<!-- {#if step == "6_0"}
     <GameStep
         nextStep="7"
         text=""
         image="/game/purchases-beginner/9-SPACESHIP_DOOR_OPENED_3(1).png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/footsteps-metal.mp3"
-        duration=2
+        duration=-1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "7_0"}
     <GameStep
         nextStep="8"
@@ -310,6 +310,7 @@
 {#if step == "16_0"}
     <GameStep
         nextStep="17"
+        text="..."
         image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
         audio="/game/purchases-beginner/audio/ambient-wind-blowing.mp3"
@@ -322,7 +323,7 @@
 {#if step == "17_0"}
     <GameStep
         nextStep="17_0"
-        text="IA : Pour votre développement personnel, souhaitez-vous en savoir plus sur la planète Koziris ?"
+        text="IA : Pour votre développement personnel, souhaitez-vous en savoir plus sur la planète Koziris durant cette marche?"
         choices={["Pourquoi pas, ça m'occupera.", "Je préfèrerais me concentrer sur la mission."]}
         image="/game/purchases-beginner/10-KOZIRIS_1.png"
         imageAlt="la lumière deviens moins éblouissante"
@@ -478,7 +479,7 @@
     <GameStep
         nextStep="19"
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/img_industrial.jpg"
         imageAlt=""
         audio="/game/purchases-beginner/audio/boom-cinematic.mp3"
         audioMuted={audioMutedAll}
@@ -490,7 +491,7 @@
         nextStep="20"
         text="Gardien : Vous êtes là pour acheter ?"
         choices={["Oui"]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/img_industrial.jpg"
         imageAlt=""
         audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
         audioLoop=1
@@ -503,7 +504,7 @@
         nextStep="21"
         text="Gardiens : Entrez, le chef vous attend."
         choices={["..."]}
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/img_industrial.jpg"
         imageAlt=""
         audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
         audioTime={audioTime}
@@ -514,27 +515,27 @@
 {/if}
 {#if step == "21_0"}
     <GameStep
-        nextStep="22"
-        image="/game/purchases-beginner/game_img_test.jpg"
+        nextStep="23"
+        image="/game/purchases-beginner/img_industrial.jpg"
         imageAlt=""
-        audio="/game/purchases-beginner/audio/ambient-industrial.mp3"
-        audioTime={audioTime}
-        duration=1
+        audio="/game/purchases-beginner/audio/walk-industrial.mp3"
+        duration=4
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
 {/if}
-{#if step == "22_0"}
+<!-- {#if step == "22_0"}
     <GameStep
         nextStep="23"
-        image="/game/purchases-beginner/game_img_test.jpg"
+        image="/game/purchases-beginner/img_industrial_walk.jpg"
         imageAlt=""
         audio="/game/purchases-beginner/audio/walk-industrial.mp3"
+        audioTime={audioTime}
         duration=3
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />
-{/if}
+{/if} -->
 {#if step == "23_0"}
     <GameStep
         nextStep="24"
@@ -550,6 +551,7 @@
     <GameStep
         nextStep="25"
         text="Chef d'Al'Cata : Asseyez-vous, ce sera rapide."
+        choices={["..."]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt=""
         audio="/game/purchases-beginner/audio/door-opening.mp3"
@@ -666,7 +668,6 @@
         choices={["Merci"]}
         image="/game/purchases-beginner/game_img_test.jpg"
         imageAlt=""
-        duration=1
         audioMuted={audioMutedAll}
         onValidate={handleValidate}
     />

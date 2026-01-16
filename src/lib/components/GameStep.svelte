@@ -63,7 +63,7 @@
 </script>
 
 <main class="w-screen flex flex-col items-center px-72 py-8">
-    <section class="w-full min-h-150 p-6 bg-black/20 backdrop-blur-sm rounded-2xl bg-white/10 border border-white/6 shadow-lg backdrop-blur-md flex flex-col items-center gap-2">
+    <section class="w-full min-h-50 p-6 bg-black/20 backdrop-blur-sm rounded-2xl bg-white/10 border border-white/6 shadow-lg backdrop-blur-md flex flex-col items-center gap-2">
             <div class="w-full flex justify-start">
             <button 
                 class="px-1 py-1"
@@ -83,7 +83,7 @@
             </button>
         </div>
         
-        <div class="overflow-hidden rounded-lg shadow-inner h-[500px] h-[500px] bg-white/5">
+        <!-- <div class="overflow-hidden rounded-lg shadow-inner h-[500px] h-[500px] bg-white/5">
             {#if image}
                 <img 
                     src={image} 
@@ -92,7 +92,7 @@
                     loading="eager"
                 />
             {/if}
-        </div>
+        </div> -->
         
     
         <div class="w-full flex justify-center text-center">
