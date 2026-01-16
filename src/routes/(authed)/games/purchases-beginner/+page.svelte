@@ -23,12 +23,14 @@
     }
 </script>
 
-<p>Etapes : {steps.join(' > ')}</p>
-{#if !step}
-    <button onclick={() => {handleValidate("0_0")}} >
-        Commencer le jeu
-    </button>
-{/if}
+<p class="bg-black/10 text-white text-sm px-2 py-1 m-2 rounded-lg">Etapes : {steps.join(' > ')}</p>
+<section class="flex justify-center mt-8">
+    {#if !step}
+        <button class="bg-gradient-to-br from-emerald-400 via-indigo-400 to-indigo-500 text-black font-semibold px-5 py-2 rounded-lg shadow hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
+                onclick={() => {handleValidate("0_0")}} >
+            Commencer le jeu
+        </button>
+    {/if}
 
 {#if step == "0_0"}
     <GameStep
