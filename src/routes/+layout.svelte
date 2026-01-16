@@ -113,7 +113,7 @@
 		<ul class="flex flex-col gap-1 p-2">
 			<li class="footer-link"><a href="https://www.linkedin.com" target="_blank">Linkedin</a></li>
 			<li class="footer-link"><a href="https://youtube.com" target="_blank">Youtube</a></li>
-			<li>Nous contacter: mattpac0309@gmail.com</li>
+			<li><a href="mailto:mattpac0309@gmail.com">Nous contacter</a></li>
 		</ul>
 	</footer>
 </div>
