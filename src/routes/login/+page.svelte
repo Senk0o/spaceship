@@ -39,7 +39,7 @@
                     id="email"
                     name="mail"
                     autocomplete="email"
-                    value="admin@game.com"
+                    value=""
                     required
                     class="w-full rounded-lg 
                     bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
@@ -54,7 +54,7 @@
                         id="password"
                         name="password"
                         autocomplete="current-password"
-                        value="password"
+                        value=""
                         required
                         class="w-full rounded-lg 
                         bg-white/3 border border-white/6 text-white placeholder-sky-200/50 
