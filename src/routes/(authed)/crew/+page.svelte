@@ -1,6 +1,5 @@
 <script lang="ts">
     import profile from '$lib/assets/img/ship_crew.png';
-    let crewName = "3IL";
 
 	export let data;
 </script>
@@ -101,7 +100,7 @@
                         font-semibold px-3 py-1 rounded-lg shadow
                         hover:bg-gradient-to-br hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-600"
                             >
-                                Ajouter à {crewName}
+                                Ajouter à {data.crew.vaisseau}
                             </button>
                         </fieldset>
                     </div>

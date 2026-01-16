@@ -1,6 +1,12 @@
 import { prisma } from '../prisma';
 
 export const CrewRepository = {
+  findById(id: bigint) {
+    return prisma.crew.findUnique({
+      where: { id }
+    });
+  },
+
   async addUserToCrew(crewId: bigint, userEmail: string) {
     return prisma.user.update({
       where: {
