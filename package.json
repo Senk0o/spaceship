@@ -7,6 +7,7 @@
 		"dev": "vite dev --host 0.0.0.0 --open false",
 		"build": "vite build",
 		"preview": "vite preview",
+		"start": "node build",
 		"db:reset": "prisma migrate reset --force && tsx prisma/seed.ts",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -34,6 +35,7 @@
 	"dependencies": {
 		"@lucia-auth/adapter-prisma": "^4.0.1",
 		"@prisma/client": "^5.22.0",
+		"@sveltejs/adapter-node": "^5.5.4",
 		"argon2": "^0.44.0",
 		"lucia": "^3.2.2",
 		"oslo": "^1.2.1",
